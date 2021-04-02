@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import { checkForFibonacciSequence } from "./helpers";
 
@@ -6,12 +6,16 @@ const CheckFibonacciSequence = () => {
   const [formValue, setFormValue] = useState("");
   const [result, setResult] = useState("");
 
+  const memoizedValue = useMemo(() => checkForFibonacciSequence(formValue), [
+    formValue,
+  ]);
+
   const handleCheck = (e) => {
     e.preventDefault();
     if (!formValue) {
       return;
     }
-    setResult(checkForFibonacciSequence(formValue));
+    setResult(memoizedValue);
   };
 
   const handleFormChange = (e) => {
