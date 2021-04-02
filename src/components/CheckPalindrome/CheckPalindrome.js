@@ -10,9 +10,11 @@ const CheckPalindrome = () => {
 
   const handleCheck = (e) => {
     e.preventDefault();
+
     if (!formValue) {
       return;
     }
+
     setIsPalindrome(checkForPalindrome(formValue));
     setShowAnswer(true);
   };

@@ -1,13 +1,13 @@
-import { CheckAnagram, CheckPalindrome, CheckFibonacciSequence } from "components";
+import { CheckAnagram, CheckPalindrome, CheckFibonacciSequence } from 'components';
 
-import "./App.css";
+import './App.css';
 
 function App() {
   return (
     <div className="App h-full px-10 py-14 bg-blue-50 grid grid-flow-col gap-4">
-      <CheckAnagram/>
-      <CheckPalindrome/>
-      <CheckFibonacciSequence/>
+      <CheckAnagram />
+      <CheckPalindrome />
+      <CheckFibonacciSequence />
     </div>
   );
 }

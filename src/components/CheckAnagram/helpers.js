@@ -8,6 +8,7 @@ export const checkForAnagram = (a, b) => {
     .split("")
     .sort()
     .join("");
+
   const strTwo = removePunctuationSpaces(b)
     .toLowerCase()
     .split("")
