@@ -12,15 +12,21 @@ const CheckFibonacciSequence = () => {
 
   const handleCheck = (e) => {
     e.preventDefault();
+
     if (!formValue) {
       return;
     }
+
     setResult(memoizedValue);
   };
 
   const handleFormChange = (e) => {
     const { value } = e.target;
-    if (value && !value.match(/^[0-9]+$/)) return;
+
+    if (value && !value.match(/^[0-9]+$/)) {
+      return;
+    }
+
     setFormValue(value);
     setResult("");
   };
