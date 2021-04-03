@@ -1,5 +1,4 @@
 export const checkForFibonacciSequence = (n) => {
-  if (typeof +n !== "number") return;
   let a = 1;
   let b = 1;
 
